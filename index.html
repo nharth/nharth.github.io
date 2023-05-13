@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>cmsc320finaltutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -15103,7 +15103,34 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div id="cell-id=27a48cc9" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+
+<div id="cell-id=34e3749b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Analysis-of-Players-in-the--2022/2023-Premier-League">Analysis of Players in the  2022/2023 Premier League<a class="anchor-link" href="#Analysis-of-Players-in-the--2022/2023-Premier-League">&#182;</a></h1><h2 id="Noah-Nazrul-Hisham">Noah Nazrul Hisham<a class="anchor-link" href="#Noah-Nazrul-Hisham">&#182;</a></h2><p>The English Premier League (EPL) is the highest division of professional soccer in England. The league consists of 20 teams. Each team in the league may have different objectives. Some want to achieve first place, while others may simply want to avoid relegation. Relegation occurs at the end of the season, where the 3 teams with lowest amount of points are sent to play in the second division during the next season. Relegation can have serious financial consequences. On the other side of the table, teams fight to win the league by obtaining the most points. Additionally, some teams just aim to get in the top four positions.Getting into the top 4 ensures Champions League qualification. The Champions League where the best teams in Europe get to play against each other in order to see who is the greatest. It is arguably one of the greatest competitions in all sports.</p>
+<p>As said previously, the English Premier League has 20 teams.Currently, there are a total of 557 players in the English Premier League. In this project, player statistics will be analyzed in order to walk the reader though the data science pipeline.The data science pipeline for this tutorial includes data curation, parsing, and management; exploratory data analysis; hypothesis testing and machine learning for analysis; and anything learned through the tutorial.</p>
+<p>There are several kinds of statistics that are measured for every player. Some that come to mind are goals, assists, games played, etc. This tutorial will introduce the reader to several other statistics that they may not have heard of. These statistics may be as variables used in machine learning models to predict other variables. In this tutorial, a multiple linear regression model will be used to find the relationship between multiple independent variables and one dependent variable. The dependent variable will be the salary of the player. Ultimately, we'd like to find out how to predict the salary of a player based on their performance.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="cell-id=d7e7000c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h2><p>The first section in this tutorial is to collect data. But before that, we need to import the libraries needed for the tutorial. These libraries are pandas, matplotlib, seaborn, and sklearn.</p>
+<p>The first data set contains statistics of English Premier League players. The columns include things like name, age, goals scored, assists, team, etc. It can be found here: &quot;<a href="https://fbref.com/en/share/NsKcV">https://fbref.com/en/share/NsKcV</a>&quot;. We will assign that link to a variable and parse the html using pandas.read_html in order to get a DataFrame that contains all the data.</p>
+
+</div>
+</div>
+</div>
+</div><div id="cell-id=27a48cc9" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15699,6 +15726,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=0a73e826" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Cleaning-the-data">Cleaning the data<a class="anchor-link" href="#Cleaning-the-data">&#182;</a></h2><p>Unfortuantely, the data does not come in the way we want it to be. This DataFrame uses multi indexing (columns with subcolumns). We only want single columns. So in order to clean the data, we will create another DataFrame that will only have single columns. The reason we are doing this is because we want to merge this DataFrame with another later on. Also, in this tep, we will modify the nation column so that the nation is represented by a 3 letter code.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=0da1882f" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16298,6 +16337,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=796a24c3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Next step is to read in another table. This table contains shooting statistics about each player in the English Premier League. The previous table didn't have detailed shooting data like this one.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=a961e857" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16882,6 +16933,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=7de617f8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Rather than merging the DataFrames, we'll just copy the columns of interest into the old DataFrame.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=78f8e16a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17455,6 +17518,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=e7940964" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We'll also read in another table that contains the salary of each player. Remember, that the goal is to obtain a linear regression model that can predict the salary of a player based on their performance. We'll clean this DataFrame as well to make merging easier.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=bf1ede2d" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17769,6 +17844,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=90aa9dc8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here we're dropping unnecessary columns.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=613e0b0a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17940,6 +18027,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=118a6484" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We only want the annual wage in USD, which is why the function below was created. It will parse all entries in the column so that they only have the wages in USD for every player.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=4d7c4a9b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -18134,6 +18233,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div id="cell-id=728feae3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now, to merge the player stats dataframe and the salary dataframe.</p>
+
+</div>
+</div>
+</div>
 </div><div id="cell-id=b42fa36b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -19152,22 +19263,18 @@ class="
 
 </div>
 
-</div><div id="cell-id=22ee665b" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div id="cell-id=4c195110" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">&#182;</a></h2><p>It seems like the model that was created wasn't very accurate at predicting player salary. The R-squared value was very low. Ideally, it should have been closer to 1. A value that is closer to 1 indicates that the model is better at predicting the dependent variable. Ultimately, there may have been better models to solve this problem. Choosing other variables may have also created a better model.</p>
 
-     </div>
 </div>
 </div>
 </div>
-
 </div>
 </body>
 
